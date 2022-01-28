@@ -140,6 +140,15 @@ header-right {
                 width: 100%;
                 background-color: blue;
                 color: white;
-                text-align: center;
+                max-width: 1350px;
+                margin: auto;
+                padding: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
             
             }
+
+
+
+ 
