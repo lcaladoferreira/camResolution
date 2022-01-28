@@ -15,6 +15,8 @@ O que há de novo:
 * bootstrap adicionado
 * adicionou alguns links para pular mais facilmente pela mesa
 * certifique-se de que funciona com Chrome, Firefox e Edge
+* POST das informações para o servidor (em desenvolvimento)
+* GET das informações para o cliente (em desenvolvimento)
  
 Experimente em https://cam-resolution.vercel.app/
 

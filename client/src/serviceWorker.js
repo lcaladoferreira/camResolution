@@ -1,14 +1,14 @@
-// This optional code is used to register a service worker.
-// register() is not called by default.
+// Este código opcional é usado para registrar um service worker.
+// register() não é chamado por padrão.
 
-// This lets the app load faster on subsequent visits in production, and gives
-// it offline capabilities. However, it also means that developers (and users)
-// will only see deployed updates on subsequent visits to a page, after all the
-// existing tabs open on the page have been closed, since previously cached
-// resources are updated in the background.
+// Isso permite que o aplicativo carregue mais rápido em visitas subsequentes em produção e fornece
+// recursos offline. No entanto, isso também significa que os desenvolvedores (e usuários)
+// só verá atualizações implantadas em visitas subsequentes a uma página, depois de todas as
+// as guias existentes abertas na página foram fechadas, pois foram armazenadas em cache anteriormente
+// os recursos são atualizados em segundo plano.
 
-// To learn more about the benefits of this model and instructions on how to
-// opt-in, read https://bit.ly/CRA-PWA
+// Para saber mais sobre os benefícios deste modelo e instruções sobre como
+// opt-in, leia https://bit.ly/CRA-PWA
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
@@ -22,12 +22,11 @@ const isLocalhost = Boolean(
 
 export function register(config) {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
-    // The URL constructor is available in all browsers that support SW.
-    const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
+// O construtor de URL está disponível em todos os navegadores que suportam SW.    const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
     if (publicUrl.origin !== window.location.origin) {
-      // Our service worker won't work if PUBLIC_URL is on a different origin
-      // from what our page is served on. This might happen if a CDN is used to
-      // serve assets; see https://github.com/facebook/create-react-app/issues/2374
+      // Nosso service worker não funcionará se PUBLIC_URL estiver em uma origem diferente
+       // do que nossa página é veiculada. Isso pode acontecer se um CDN for usado para
+       // atende ativos; veja https://github.com/facebook/create-react-app/issues/2374
       return;
     }
 
@@ -35,11 +34,12 @@ export function register(config) {
       const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
 
       if (isLocalhost) {
-        // This is running on localhost. Let's check if a service worker still exists or not.
-        checkValidServiceWorker(swUrl, config);
+// Isso está sendo executado em localhost. Vamos verificar se um service worker ainda existe ou não.        
 
-        // Add some additional logging to localhost, pointing developers to the
-        // service worker/PWA documentation.
+checkValidServiceWorker(swUrl, config);
+
+        // Adicione alguns registros adicionais ao localhost, apontando os desenvolvedores para o
+         // documentação do service worker/PWA.
         navigator.serviceWorker.ready.then(() => {
           console.log(
             'This web app is being served cache-first by a service ' +
@@ -47,7 +47,7 @@ export function register(config) {
           );
         });
       } else {
-        // Is not localhost. Just register service worker
+// Não é localhost. Basta registrar o service worker
         registerValidSW(swUrl, config);
       }
     });
@@ -66,25 +66,25 @@ function registerValidSW(swUrl, config) {
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
-              // At this point, the updated precached content has been fetched,
-              // but the previous service worker will still serve the older
-              // content until all client tabs are closed.
+              // Neste ponto, o conteúdo pré-cache atualizado foi buscado,
+               // mas o service worker anterior ainda servirá o antigo
+               // conteúdo até que todas as guias do cliente sejam fechadas.
               console.log(
                 'New content is available and will be used when all ' +
                   'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
               );
 
-              // Execute callback
+              // Executa o callback
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
               }
             } else {
-              // At this point, everything has been precached.
-              // It's the perfect time to display a
-              // "Content is cached for offline use." message.
+              // Neste ponto, tudo foi "pré-cache".
+               // É o momento perfeito para exibir um
+               // "O conteúdo é armazenado em cache para uso offline." mensagem.
               console.log('Content is cached for offline use.');
 
-              // Execute callback
+              // Executar callback
               if (config && config.onSuccess) {
                 config.onSuccess(registration);
               }
@@ -99,23 +99,23 @@ function registerValidSW(swUrl, config) {
 }
 
 function checkValidServiceWorker(swUrl, config) {
-  // Check if the service worker can be found. If it can't reload the page.
+  // Verifique se o service worker pode ser encontrado. Se não puder recarregar a página.
   fetch(swUrl)
     .then(response => {
-      // Ensure service worker exists, and that we really are getting a JS file.
+      // Certifique-se de que o service worker existe e que realmente estamos obtendo um arquivo JS.
       const contentType = response.headers.get('content-type');
       if (
         response.status === 404 ||
         (contentType != null && contentType.indexOf('javascript') === -1)
       ) {
-        // No service worker found. Probably a different app. Reload the page.
+        // Nenhum service worker encontrado. Provavelmente um aplicativo diferente. Recarregue a página.
         navigator.serviceWorker.ready.then(registration => {
           registration.unregister().then(() => {
             window.location.reload();
           });
         });
       } else {
-        // Service worker found. Proceed as normal.
+        // Trabalhador de serviço encontrado. Proceda normalmente.
         registerValidSW(swUrl, config);
       }
     })
