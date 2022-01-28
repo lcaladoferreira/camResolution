@@ -1,4 +1,14 @@
+body{
 
+    background-color: rgb(13, 101, 1);
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    display: flex; 
+}
+            
             .row {
                 margin-left: 10px;
                 padding: 5px;
