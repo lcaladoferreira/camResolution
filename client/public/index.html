@@ -1,86 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href="./login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="shortcut icon" href="/webcam.svg">
-    <link rel="stylesheet" href="style.css">
-
     <!--
-       manifest.json fornece metadados usados quando seu aplicativo da web é instalado em um
-       dispositivo móvel ou desktop do usuário. Consulte https://developers.google.com/web/fundamentals/web-app-manifest/
-     -->
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
-       Observe o uso de %PUBLIC_URL% nas tags acima.
-       Ele será substituído pelo URL da pasta `public` durante a compilação.
-       Somente arquivos dentro da pasta `public` podem ser referenciados a partir do HTML.
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-       Ao contrário de "/favicon.ico" ou "favicon.ico", "%PUBLIC_URL%/favicon.ico"
-       funcionam corretamente com roteamento do lado do cliente e uma URL pública não raiz.
-       Aprenda como configurar uma URL pública não raiz executando `npm run build`.
-     -->
-    <title>WebRTC Camera Resolution Finder</title>
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>User Area</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-   <!--
-       Este arquivo HTML é um modelo.
-       Se você abri-lo diretamente no navegador, verá uma página vazia.
-
-       Você pode adicionar webfonts, meta tags ou análises a este arquivo.
-       A etapa de compilação colocará os scripts agrupados na tag <body>.
-
-       Para iniciar o desenvolvimento, execute `npm start` ou `yarn start`.
-       Para criar um pacote de produção, use `npm run build` ou `yarn build`.
-     -->
     <body>
-      <div id="container">
-          <div class="row">
-              <h2>WebRTC getUserMedia camera resolution finder</h2>
-              <div id="selectArea" hidden>
-                  <h4>Select camera(s) below:</h4>
-                  <select id="devices" name="Video devices" multiple title="devices"></select>
+      <!-- partial:index.partial.html -->
+      <div class="container" id="container">
+          <div class="form-container sign-up-container">
+              <form action="#">
+                  <h1>Create Account</h1>
+                  <input type="text" placeholder="Nome" />
+                  <input type="email" placeholder="Email" />
+                  <input type="password" placeholder="Senha" />
+                  <button>Register</button>
+              </form>
+          </div>
+          <div class="form-container sign-in-container">
+              <form action="#">
+                  <h1>Sign In</h1>
+                  <input type="email" placeholder="Email" />
+                  <input type="password" placeholder="Senha" />
+                  <a href="#">Forgot the password?</a>
+                  <button>Enter</button>
+              </form>
+          </div>
+          <div class="overlay-container">
+              <div class="overlay">
+                  <div class="overlay-panel overlay-left">
+                      <h1>Welcome Back!</h1>
+                      <p>To stay connected with us, log in with your personal information.</p>
+                      <button class="ghost" id="signIn">Sign In</button>
+                  </div>
+                  <div class="overlay-panel overlay-right">
+                      <h1>Don't have a registration yet?</h1>
+                      <p>Enter your personal data and sign up</p>
+                      <button class="ghost" id="signUp">Sign Up</button>
+                  </div>
               </div>
-          </div>
-          <div class="row" id="controlArea">
-              <h4>Click one of the buttons below to find camera resolutions:</h4>
-              <div class="col-sm-6 scanarea well well-sm" id="quickArea">
-                  <button class="btn btn-primary btn-block" id="quickButton">Quick Scan</button>
-                  <p id="quickLabel"></p>
-              </div>
-              <div class="col-sm-6 scanarea well well-sm" id="fullArea">
-                  <button class="btn" id="fullButton">Full Scan</button>
-                  <p>vertical resolution range: <br>
-                  <span>  max:
-                      <input type="text" id="hiRes" value="1080" size="4" maxlength="4" min="1" max="2160" pattern="[0-9]{1,4}" title="hiRes" />
-                       to min:
-                      <input type="text" id="loRes" value="1" size="4" maxlength="4" min="1" max="2160" pattern="[0-9]{1,4}" title="lowRes"/>
-                  </span></p>
-              </div>
-          </div>
-          <div class="row" id="videoarea">
-              <video id="video" autoplay muted playsinline></video>
-          </div>
-          <div class="row">
-              <p id="jump" hidden>Jump to <a href="#bottom">bottom</a> of table</p>
-              <table class="table-condensed table-bordered table-striped"	id="results" hidden >
-                  <tr><th>Browser</th><th>Device</th><th>Res Name</th><th>Ratio</th><th>Ask</th><th>Actual</th><th>Status</th><th class="hidden">deviceIndex</th><th class="hidden">resIndex</th></tr>
-              </table>
-              <h5 class="pfin" hidden><a href=".">Refresh</a> to run test again with same or different parameters (you'll lose the table above). </h5>
-              <h5 class="pfin" hidden>Export results to a CSV file here: <a id="csvOut" href="#" class="btn">gumResTestExport.csv</a></h5>
-          </div>
-          <div id="bottom"></div>
-          <div class="row">
-              <h4>Visit <a href="http://webrtchacks.com">webrtcHacks.com</a> for more details...</h4>
           </div>
       </div>
-      <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-      <script src="https://webrtchacks.github.io/adapter/adapter-latest.js"></script>
-      <script src="/js/resolutionScan.js"></script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
   </body>
+  <footer>
+  </footer>
+  <!-- partial -->
+  <script src="/node-mysql-login-register/client/public/login.js"></script>
 </html>
