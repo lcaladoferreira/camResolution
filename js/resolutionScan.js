@@ -464,3 +464,5 @@ function exportTableToCSV($table, filename) {
             'target': '_blank'
         });
 }
+
+

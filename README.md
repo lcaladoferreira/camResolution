@@ -16,8 +16,6 @@ O que há de novo:
 * adicionou alguns links para pular mais facilmente pela mesa
 * certifique-se de que funciona com Chrome, Firefox e Edge
  
-Experimente em https://webrtchacks.github.io/WebRTC-Camera-Resolution/
+Experimente em https://cam-resolution.vercel.app/
 
-Leia mais em https://webrtchacks.com/getusermedia-resolutions-3/
- 
-Trazido a você por [webrtcHacks.com](http://webrtchacks.com)
+
