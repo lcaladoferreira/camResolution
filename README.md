@@ -1,24 +1,24 @@
-WebRTC-Camera-Resolution
+WebRTC-Resolução de Câmera
 ========================
 
-Finds WebRTC Camera resolutions.
+Localiza as resoluções da câmera WebRTC.
 
-Simple demo to show how one can automatically identify camera resolutions for use with WebRTC.
-Quick scan checks only common video resolutions.
-Full scan checks all 1:1, 4:3 and 16:9 resolutions between an entered range.
+Demonstração simples para mostrar como se pode identificar automaticamente as resoluções da câmera para uso com WebRTC.
+A verificação rápida verifica apenas as resoluções de vídeo comuns.
+A varredura completa verifica todas as resoluções 1:1, 4:3 e 16:9 entre um intervalo inserido.
 
-### Updated February 2016
+### Atualizado em fevereiro de 2016
 
-What's new:
-* support of the latest WebRTC getUserMedia and device enumeration specs
-* link to [adapter-latest.js](https://webrtc.github.io/adapter/adapter-latest.js)
-* added 1:1 aspect ratio scan to the full scanner
-* added bootstrap
-* added some links to more easily jump around the table
-* made sure it works with Chrome, Firefox, and Edge
+O que há de novo:
+* suporte das mais recentes especificações de enumeração de dispositivos e getUserMedia WebRTC
+* link para [adapter-latest.js](https://webrtc.github.io/adapter/adapter-latest.js)
+* adicionada varredura de proporção de aspecto 1:1 ao scanner completo
+* bootstrap adicionado
+* adicionou alguns links para pular mais facilmente pela mesa
+* certifique-se de que funciona com Chrome, Firefox e Edge
  
-Try it at https://webrtchacks.github.io/WebRTC-Camera-Resolution/
+Experimente em https://webrtchacks.github.io/WebRTC-Camera-Resolution/
 
-Read more at https://webrtchacks.com/getusermedia-resolutions-3/
+Leia mais em https://webrtchacks.com/getusermedia-resolutions-3/
  
-Brought to you by [webrtcHacks.com](http://webrtchacks.com)
+Trazido a você por [webrtcHacks.com](http://webrtchacks.com)
