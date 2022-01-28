@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="utf-8" />
-        <title>Localizador de resolução de câmera</title>
+        <title>WebRTC Camera Resolution Finder</title>
         <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="shortcut icon" href="https://webrtchacks.com/wp-content/themes/parament/favicon.ico">
@@ -17,8 +17,8 @@
                 height: 100px;
             }
             video {
-                transform: scale(-1, 1); /* Para Firefox (& IE) */
-                -webkit-transform: scale(-1, 1); /*Para Chrome & Opera (& Safari) */
+                transform: scale(-1, 1); /*For Firefox (& IE) */
+                -webkit-transform: scale(-1, 1); /*for Chrome & Opera (& Safari) */
             }
             table th.hidden {
                 display: none;
@@ -32,21 +32,21 @@
     <body>
         <div id="container">
             <div class="row">
-                <h2>Localizador de resolução de câmera</h2>
+                <h2>WebRTC getUserMedia camera resolution finder</h2>
                 <div id="selectArea" hidden>
-                    <h4>Selecione a(s) camera(s) abaixo:</h4>
+                    <h4>Select camera(s) below:</h4>
                     <select id="devices" name="Video devices" multiple title="devices"></select>
                 </div>
             </div>
             <div class="row" id="controlArea">
-                <h4>Clique em um dos botões abaixo para encontrar as resoluções da câmera:</h4>
+                <h4>Click one of the buttons below to find camera resolutions:</h4>
                 <div class="col-sm-6 scanarea well well-sm" id="quickArea">
-                    <button class="btn btn-primary btn-block" id="quickButton">Scan Rápdio</button>
+                    <button class="btn btn-primary btn-block" id="quickButton">Quick Scan</button>
                     <p id="quickLabel"></p>
                 </div>
                 <div class="col-sm-6 scanarea well well-sm" id="fullArea">
-                    <button class="btn btn-primary btn-block" id="fullButton">Scan Completo</button>
-                    <p>faixa de resolução vertical: <br>
+                    <button class="btn btn-primary btn-block" id="fullButton">Full Scan</button>
+                    <p>vertical resolution range: <br>
                     <span>  max:
                         <input type="text" id="hiRes" value="1080" size="4" maxlength="4" min="1" max="2160" pattern="[0-9]{1,4}" title="hiRes" />
                          to min:
@@ -58,16 +58,16 @@
                 <video id="video" autoplay muted playsinline></video>
             </div>
             <div class="row">
-                <p id="jump" hidden>Pular para <a href="#bottom">Botão</a> da tabela</p>
+                <p id="jump" hidden>Jump to <a href="#bottom">bottom</a> of table</p>
                 <table class="table-condensed table-bordered table-striped"	id="results" hidden >
-                    <tr><th>Navegador</th><th>Dispositivo</th><th>Nome</th><th>Proporção</th><th>Pedir</th><th>Atual</th><th>Status</th><th class="hidden">deviceIndex</th><th class="hidden">resIndex</th></tr>
+                    <tr><th>Browser</th><th>Device</th><th>Res Name</th><th>Ratio</th><th>Ask</th><th>Actual</th><th>Status</th><th class="hidden">deviceIndex</th><th class="hidden">resIndex</th></tr>
                 </table>
-                <h5 class="pfin" hidden><a href=".">Atualizar</a> para executar o teste novamente com parâmetros iguais ou diferentes (você perderá a tabela acima). </h5>
-                <h5 class="pfin" hidden>Exporte os resultados para um arquivo CSV aqui: <a id="csvOut" href="#" class="btn btn-link btn-md">resultados.csv</a></h5>
+                <h5 class="pfin" hidden><a href=".">Refresh</a> to run test again with same or different parameters (you'll lose the table above). </h5>
+                <h5 class="pfin" hidden>Export results to a CSV file here: <a id="csvOut" href="#" class="btn btn-link btn-md">gumResTestExport.csv</a></h5>
             </div>
             <div id="bottom"></div>
             <div class="row">
-                <h4>Visite <a href="https://github.com/lcaladoferreira"></a> para mais detalhes.</h4>
+                <h4>Visit <a href="http://webrtchacks.com">webrtcHacks.com</a> for more details...</h4>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
