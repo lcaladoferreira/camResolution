@@ -1,4 +1,4 @@
-Resolução de Câmera 
+Cam Resolution Checker
 ====================
 
 Página simples com um Back-end pronto para receber rotas da API e um front-end com interação com usuário e utilização da câmera, identificando automaticamente as resoluções da câmera para uso com WebRTC (Desenvolvido por WebRTCHacks).
