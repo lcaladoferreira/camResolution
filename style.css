@@ -30,11 +30,11 @@ header {
     background-color: #f1f1f1;
     padding: 20px 10px;
     display: flex;
-    align-content: space-around;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 header a {
