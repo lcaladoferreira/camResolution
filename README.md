@@ -7,7 +7,6 @@ Demonstração simples para mostrar como se pode identificar automaticamente as 
 A verificação rápida verifica apenas as resoluções de vídeo comuns.
 A varredura completa verifica todas as resoluções 1:1, 4:3 e 16:9 entre um intervalo inserido.
 
-### Atualizado em fevereiro de 2016
 
 O que há de novo:
 * suporte das mais recentes especificações de enumeração de dispositivos e getUserMedia WebRTC
