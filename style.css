@@ -1,12 +1,16 @@
 body{
 
     background-color: rgb(13, 101, 1);
-    color: black;
+   
     font-family: 'Courier New', Courier, monospace;
-    font-weight: 500;
-    font-size: 1.5rem;
+}
 
-    display: flex; 
+h1, h2, h3, h4, h5, h6 {
+
+    font-weight: 800;
+    font-size: 2rem;
+    color: black;
+
 }
             
             .row {
