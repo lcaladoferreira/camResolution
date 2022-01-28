@@ -26,9 +26,15 @@ p {
 
 
 header {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 20px 10px;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 header a {
