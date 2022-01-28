@@ -1,0 +1,19 @@
+
+            .row {
+                margin-left: 10px;
+                padding: 5px;
+            }
+            .scanarea {
+                max-width: 350px;
+                height: 100px;
+            }
+            video {
+                transform: scale(-1, 1); /*For Firefox (& IE) */
+                -webkit-transform: scale(-1, 1); /*for Chrome & Opera (& Safari) */
+            }
+            table th.hidden {
+                display: none;
+                border: none;
+                visibility: hidden;
+            }
+        
