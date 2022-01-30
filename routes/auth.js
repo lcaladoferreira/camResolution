@@ -24,7 +24,7 @@ function validate(req) {
 }
 
 // Login do Usuário
-router.post("/", async (req, res) => {
+router.post("/user", async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 

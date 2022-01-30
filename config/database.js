@@ -6,3 +6,5 @@ module.exports = new Sequelize(
   config.password,
   config
 );
+
+// configuração do banco de dados
