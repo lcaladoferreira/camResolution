@@ -1,24 +1,24 @@
-Cam Resolution Checker
-====================
+This is Cam Resolution Checker!
+===============================
 
-Página simples com um Back-end pronto para receber rotas da API e um front-end com interação com usuário e utilização da câmera, identificando automaticamente as resoluções da câmera para uso com WebRTC (Desenvolvido por WebRTCHacks).
+Simple page with a Back-end ready to receive API routes and a front-end with user interaction and camera usage, automatically identifying camera resolutions for use with WebRTC (Developed by WebRTCHacks). Our solution let you build video and audio into any application, solving for scaling, media quality and compliant infrastructure.
 
-Modo de Funcionamento 
-====================
+Operating mode
+=======================
 
-O Quick Scan verifica apenas as resoluções de vídeo comuns, já o Full Scan verifica todas as resoluções 1:1, 4:3 e 16:9 entre um intervalo inserido.
+Quick Scan only checks common video resolutions, Full Scan checks all 1:1, 4:3 and 16:9 resolutions between an entered range.
 
-O que há de novo? 
-==================
-* suporte das mais recentes especificações de enumeração de dispositivos e getUserMedia WebRTC
-* link para [adapter-latest.js](https://webrtc.github.io/adapter/adapter-latest.js)
-* adicionada varredura de proporção de aspecto 1:1 ao scanner completo
-* bootstrap adicionado
-* adicionou alguns links para pular mais facilmente pela mesa
-* certifique-se de que funciona com Chrome, Firefox e Edge
-* POST das informações para o servidor (em desenvolvimento)
-* GET das informações para o cliente (em desenvolvimento)
+What's new?
+===================
+* support of the latest device enumeration specifications and getUserMedia WebRTC
+* link to [adapter-latest.js](https://webrtc.github.io/adapter/adapter-latest.js)
+* added 1:1 aspect ratio scanning to full scanner
+* added bootstrap
+* added some links to more easily jump around the table
+* make sure it works with Chrome, Firefox and Edge
+* POST the information to the server (under development)
+* GET the information to the client (under development)
  
-Experimente a versão Beta em https://cam-resolution.vercel.app/
+Try the Beta Version at https://cam-resolution.vercel.app/
 
 
