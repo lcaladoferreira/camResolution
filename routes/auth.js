@@ -6,7 +6,7 @@ const bcrypt = require("bcryptjs");
 const _ = require("lodash");
 const db = require("../models/index");
 
-const router = express.Router(); //api/users
+const router = express.Router(); //api/usuários
 
 function validate(req) {
   const schema = {
@@ -23,12 +23,12 @@ function validate(req) {
   return Joi.validate(req, schema);
 }
 
-// User Login
+// Login do Usuário
 router.post("/", async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
-  // Replace below line with `await` database search for users
+  // Substitua a linha abaixo pela pesquisa de banco de dados `await` para usuários
   const user = await db.User.findOne({
     where: {
       email: req.body.email
