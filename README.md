@@ -1,7 +1,7 @@
 This is Cam Resolution Checker!
 ===============================
 
-Simple page with a Back-end ready to receive API routes and a front-end with user interaction and camera usage, automatically identifying camera resolutions for use with WebRTC (Developed by WebRTCHacks). Our solution let you build video and audio into any application, solving for scaling, media quality and compliant infrastructure.
+Simple page with a Back-end ready to receive API routes and a front-end with user interaction and camera usage, automatically identifying camera resolutions for use with WebRTC developed by WebRTCHacks. Our solution let you build video and audio into any application, solving for scaling, media quality and compliant infrastructure.
 
 Operating mode
 =======================
