@@ -6,7 +6,7 @@ Simple page with a Back-end ready to receive API routes and a front-end with use
 Operating mode
 =======================
 
-Quick Scan only checks common video resolutions, Full Scan checks all 1:1, 4:3 and 16:9 resolutions between an entered range.
+Quick Scan only checks common video resolutions, Full Scan checks all 1:1, 4:3 and 16:9 resolutions between an entered range. Full scan checks all 1:1, 4:3 and 16:9 resolutions between an entered range.
 
 What's new?
 ===================
