@@ -12,7 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   User.associate = function(models) {
-// associações podem ser definidas aqui  };
+    // as associações do usuário podem ser definidas aqui
+  };
 
   User.prototype.generateAuthToken = function() {
     const token = jwt.sign(

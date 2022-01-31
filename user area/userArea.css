@@ -1,0 +1,95 @@
+.cancel {float:right;}
+  .intl-tel-input {width:100%;}
+  #user_phone {height: 35px;width:100%;}
+
+  @media only screen and (max-width: 600px) {
+      body.android .intercom-lightweight-app,
+      body.android .play-download,
+      body.android button.btn.log-out {
+          display: none !important;
+      }
+
+      body.android div.Content.MyProfile {
+          padding: 0 !important;
+      }
+
+      body.android div.Content.MyProfile .tab-content {
+          padding: 24px;
+      }
+
+      body.android .nav-tabs {
+          margin-top: 54px
+      }
+
+      body.android .nav-item,
+      body.android .nav-link {
+          width: 100%;
+      }
+
+      body.android .nav-link {
+          border-radius: 0;
+          color: #009A81;
+          background: white;
+          text-align: left;
+      }
+
+      body.android .nav-link.active {
+          color: white;
+          border-bottom: 1px solid #1D3F59;
+          background: #1D3F59;
+          text-align: left;
+          font-weight: bold;
+      }
+
+      body.android #referrals,
+      body.android #verifications,
+      body.android #payment,
+      body.android #history {
+          padding-top: 0 !important;
+      }
+
+      body.android button.feedback-button {
+          border-radius: 30px;
+          padding: 1px 4px;
+          border: 0;
+          background: #1d3f59;
+          color: white;
+          height: 22px;
+          width: 22px;
+      }
+
+
+      h4 {
+          margin-top: 32px;
+          margin-bottom: 8px;
+          font-size: 110%;
+          font-weight: bold;
+      }
+
+      table.table th {
+          vertical-align: middle;
+      }
+
+      #rejectionReasonModal {
+          margin-top: 66px;
+      }
+
+
+  }
+
+  #getting_started {
+    padding:20px; border:thin solid silver;
+    margin-bottom:50px;
+  }
+  #getting_started li {
+    font-size:15px;
+    margin-left:25px;
+    margin-bottom:25px;
+  }
+
+.user_paypal_address {display:none}
+.user_remitly_bank {display:none}
+.user_remitly_bank_acct {display:none}
+#paymentSide input[type='text'] {width:200px}
+#paymentSide select {width:200px}
+#paymentSide input[type='password'] {width:425px}

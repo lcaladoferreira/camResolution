@@ -12,3 +12,6 @@ module.exports = function(req, res, next) {
     res.status(400).send("Invalid token.");
   }
 };
+
+//  JSON Web Token para integrar client e server 
+

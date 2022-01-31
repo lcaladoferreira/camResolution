@@ -1,0 +1,741 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Cam Resolution Checker - user area</title>
+    <meta name="description"
+        content="Cam Resolution Checker is an WebRTC developer platform with Bootstrap design, with backend/frontend tokenized server integration and SEO optimization..">
+    <meta name="author" content="">
+    <meta property="fb:admins" content="100005224150497" />
+    <meta property="og:site_name" content="Cam Resolution Checker" />
+    <!--[if lt IE 9]>
+      <script defer src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="/webcam.svg"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" media="all"
+        href="https://d1qm9jziw6uw5m.cloudfront.net/assets/application-a153e2ded3cbc020f8116b75c6672abd70317f88d11c86ec1c957b3e39d5451d.css" />
+    <link rel="stylesheet" href="/user area/userArea.css">
+    <!--function validateEmail-->
+    <script
+        src="https://d1qm9jziw6uw5m.cloudfront.net/assets/application-2be0e30a83a786128a60bc78cc927f0071eb4a581f7aeff4a154c02133d7f68b.js"
+        crossorigin="anonymous" defer="defer"></script>
+
+
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="" />
+
+</head>
+
+
+<body id="registrations_edit" class="  ">
+    <div style="z-index:20000" class="alert  alert-dismissible fade show alert-success">
+        Successfully connected.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div style="z-index:20000" class="alert alert-dismissible fade show alert-warning">
+        <p class="notice">A message with a confirmation link has been sent to your email address. Please,
+            follow the link to activate your account.</i>.</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class='container'>
+        <div class='col-md-12' style="margin-top:5px">
+            <a class="log-out btn btn-outline-primary pull-right" rel="nofollow" data-method="delete"
+                href="/users/sign_out">Exit</a>
+        </div>
+    </div>
+
+
+    <div id="row">
+
+
+
+
+        <div class="Content MyProfile container">
+            <div class='row'>
+                <div class='col-md-6 offset-md-3'>
+
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="nav-item"><a type="button" role="tab" data-bs-toggle="tab"
+                                data-bs-target="#general" aria-controls="general" class="nav-link active"><i
+                                    class="fa fa-user" aria-hidden="true"></i> My Profile</a></li>
+                        <li role="presentation" class="nav-item"><a type="button" role="tab" data-bs-toggle="tab"
+                                data-bs-target="#payment" aria-controls="payment" id="stripeLink" class="nav-link"><i
+                                    class="fa fa-usd" aria-hidden="true"></i> Payment</a></li>
+                        <li role="presentation" class="nav-item"><a type="button" role="tab" data-bs-toggle="tab"
+                                data-bs-target="#history" aria-controls="history" class="nav-link"><i
+                                    class="fa fa-briefcase" aria-hidden="true"></i> My Entries</a></li>
+                        <li role="presentation" class="nav-item"><a type="button" role="tab" data-bs-toggle="tab"
+                                data-bs-target="#referrals" aria-controls="referrals" class="nav-link"><i
+                                    class="fa fa-users" aria-hidden="true"></i> Reffereals</a></li>
+                        <li role="presentation" class="nav-item"><a type="button" role="tab" data-bs-toggle="tab"
+                                data-bs-target="#verifications" aria-controls="verifications" class="nav-link"><i
+                                    class="fa fa-search" aria-hidden="true"></i> Verifications</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 tab-content">
+                    <div role="tabpanel" class="UserInfo tab-pane active" id="general">
+                        <div class="row">
+                            <div class="col-md-12 Left">
+                                <h1>My Profile: </h1>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:20px;">
+                            <div class="col-md-2 Left">
+                                <div class="MediaBox">
+                                    <div class="Image" style="background-image: url('/users/208774/photo');"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <form enctype="multipart/form-data" action="/users/208774/upload_photo"
+                                    accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token"
+                                        value="yXko1CGa9_ajwlDVnCkOsFhEFBrdkgY9zLILmz8V8qm0MnX9r_JRcV2I26q5dj6OLagOe_rrf9UO0K4u_aq8_w" />
+                                    <label for="Upload_a_new_photo_in_JPG_PNG_or_GIF_format.">Upload a new photo in
+                                        .jpg, .png or .gif format.</label>
+                                    <input type="file" name="picture" id="picture" required="required"
+                                        accept="image/*" />
+                                    <input type="submit" name="commit" value="Upload"
+                                        class="btn btn-small green mt-2" style="display:block"
+                                        data-disable-with="Loading.." />
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class='col-md-4'>
+                                <p style='text-align:center'>
+                                    <a class="play-download" style="display:block;margin-top:10px;margin-bottom:25px"
+                                        href="">
+                                        <img style="width:100%" src="">
+                                    </a>
+                                </p>
+
+                            </div>
+
+                            <div class='col-md-4'>
+                                <a class='btn btn-lg btn-success'
+                                    style='display:block;margin-top:25px;margin-bottom:25px' href="/users/208774/badge"
+                                    target="_blank"><i class='fa fa-id-badge'></i> Download ID badge</a>
+                            </div>
+
+                            <div class='col-md-4'>
+                                <a class='btn btn-lg btn-warning'
+                                    style='display:block;margin-top:25px;margin-bottom:25px'
+                                    onclick="javascript:Intercom('show')"><i class='fa fa-life-ring'></i> Need help?</a>
+                            </div>
+                        </div>
+
+
+                        <form class="simple_form edit_user" id="edit_user" action="/users" accept-charset="UTF-8"
+                            method="post"><input type="hidden" name="_method" value="put" /><input type="hidden"
+                                name="authenticity_token"
+                                value="oh9ZbvC29roVmi6rq-hG5RBhMhHA68qzig-6Dp84A6qv4ZVS84B6RzUc9S_alNWxJaoc18OdSOz0eHMO5eIL1Q" />
+
+
+                            <div class="form-group row mb-3 email required user_email form-group-valid"><label
+                                    class="col-sm-3 col-form-label email required control-label"
+                                    style="text-transform:capitalize" for="user_email">e-mail <abbr
+                                        title="necessário">*</abbr></label>
+                                <div class="col-sm-9"><input class="form-control is-valid string email required"
+                                        required="required" aria-required="true" type="email" value=""
+                                        name="user[email]" id="user_email" /></div>
+                            </div>
+                            <div class="form-group row mb-3 string required user_first_name form-group-valid"><label
+                                    class="col-sm-3 col-form-label string required control-label"
+                                    for="user_first_name">First name <abbr title="necessário">*</abbr></label>
+                                <div class="col-sm-9"><input class="form-control is-valid string required"
+                                        required="required" aria-required="true" type="text" value="Leandro "
+                                        name="user[first_name]" id="user_first_name" /></div>
+                            </div>
+                            <div class="form-group row mb-3 string optional user_last_name form-group-valid"><label
+                                    class="col-sm-3 col-form-label string optional control-label"
+                                    for="user_last_name">Last name</label>
+                                <div class="col-sm-9"><input class="form-control is-valid string optional" type="text"
+                                        value="Ferreira" name="user[last_name]" id="user_last_name" /></div>
+                            </div>
+                            <div class="form-group row mb-3 time_zone optional user_time_zone form-group-valid"><label
+                                    class="col-sm-3 col-form-label time_zone optional control-label"
+                                    for="user_time_zone">Time zone</label>
+                                <div class="col-sm-9"><select class="form-control is-valid time_zone optional"
+                                        name="user[time_zone]" id="user_time_zone">
+                                        <option selected="selected" value="Pacific Time (US &amp; Canada)">(GMT-08:00)
+                                            Pacific Time (US and Canada)</option>
+                                        <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &
+                                            Canada)</option>
+                                        <option value="Central Time (US &amp; Canada)">(GMT-06:00) Central Time (US &
+                                            Canada)</option>
+                                        <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &
+                                            Canada)</option>
+                                        <option value="" disabled="disabled">--- ----------</option>
+                                        <option value="International Date Line West">(GMT-12:00) International Date Line
+                                            - West</option>
+                                        <option value="American Samoa">(GMT-11:00) American Samoa</option>
+                                        <option value="Midway Island">(GMT-11:00) Midway Islands</option>
+                                        <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                                        <option value="Alaska">(GMT-09:00) Alaska</option>
+                                        <option value="Tijuana">(GMT-08:00) Tijuana</option>
+                                        <option value="Arizona">(GMT-07:00) Arizona</option>
+                                        <option value="Chihuahua">(GMT-07:00) Chihuahua</option>
+                                        <option value="Mazatlan">(GMT-07:00) Mazatlan</option>
+                                        <option value="Central America">(GMT-06:00) Central America</option>
+                                        <option value="Guadalajara">(GMT-06:00) Guadalajara</option>
+                                        <option value="Mexico City">(GMT-06:00) Mexico City</option>
+                                        <option value="Monterrey">(GMT-06:00) Monterrey</option>
+                                        <option value="Saskatchewan">(GMT-06:00) Saskatchewan</option>
+                                        <option value="Bogota">(GMT-05:00) Bogota</option>
+                                        <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                                        <option value="Lime">(GMT-05:00) Lime</option>
+                                        <option value="Quito">(GMT-05:00) Quito</option>
+                                        <option value="Atlantic Time (Canada)">(GMT-04:00) Atlantic Time (Canada)
+                                        </option>
+                                        <option value="Caracas">(GMT-04:00) Caracas</option>
+                                        <option value="Georgetown">(GMT-04:00) Georgetown</option>
+                                        <option value="La Paz">(GMT-04:00) La Paz</option>
+                                        <option value="Puerto Rico">(GMT-04:00) Puerto Rico</option>
+                                        <option value="Santiago">(GMT-04:00) Santiago</option>
+                                        <option value="Newfoundland">(GMT-03:30) Newfoundland</option>
+                                        <option value="Brasilia">(GMT-03:00) Brasilia</option>
+                                        <option value="Buenos Aires">(GMT-03:00) Buenos Aires</option>
+                                        <option value="Greenland">(GMT-03:00) Greenland</option>
+                                        <option value="Montevideo">(GMT-03:00) Montevideo</option>
+                                        <option value="Mid-Atlantic">(GMT-02:00) Mid-Atlantic</option>
+                                        <option value="Azores">(GMT-01:00) Azores</option>
+                                        <option value="Cape Verde Is.">(GMT-01:00) Cape Verde Island</option>
+                                        <option value="Edinburgh">(GMT+00:00) Edinburgh</option>
+                                        <option value="Lisbon">(GMT+00:00) Lisbon</option>
+                                        <option value="London">(GMT+00:00) London</option>
+                                        <option value="Monrovia">(GMT+00:00) Monrovia</option>
+                                        <option value="UTC">(GMT+00:00) UTC</option>
+                                        <option value="Amsterdam">(GMT+01:00) Amsterdam</option>
+                                        <option value="Belgrade">(GMT+01:00) Belgrade</option>
+                                        <option value="Berlin">(GMT+01:00) Berlin</option>
+                                        <option value="Bern">(GMT+01:00) Bern</option>
+                                        <option value="Bratislava">(GMT+01:00) Bratislava</option>
+                                        <option value="Brussels">(GMT+01:00) Brussels</option>
+                                        <option value="Budapest">(GMT+01:00) Budapest</option>
+                                        <option value="Casablanca">(GMT+01:00) Casablanca</option>
+                                        <option value="Copenhagen">(GMT+01:00) Copenhagen</option>
+                                        <option value="Dublin">(GMT+01:00) Dublin</option>
+                                        <option value="Ljubljana">(GMT+01:00) Ljubljana</option>
+                                        <option value="Madrid">(GMT+01:00) Madrid</option>
+                                        <option value="Paris">(GMT+01:00) Paris</option>
+                                        <option value="Prague">(GMT+01:00) Prague</option>
+                                        <option value="Rome">(GMT+01:00) Rome</option>
+                                        <option value="Sarajevo">(GMT+01:00) Sarajevo</option>
+                                        <option value="Skopje">(GMT+01:00) Skopje</option>
+                                        <option value="Stockholm">(GMT+01:00) Stockholm</option>
+                                        <option value="Vienna">(GMT+01:00) Vienna</option>
+                                        <option value="Warsaw">(GMT+01:00) Warsaw</option>
+                                        <option value="West Central Africa">(GMT+01:00) West Central Africa</option>
+                                        <option value="Zagreb">(GMT+01:00) Zagreb</option>
+                                        <option value="Zurich">(GMT+01:00) Zurich</option>
+                                        <option value="Athens">(GMT+02:00) Athens</option>
+                                        <option value="Bucharest">(GMT+02:00) Bucharest</option>
+                                        <option value="Cairo">(GMT+02:00) Cairo</option>
+                                        <option value="Harare">(GMT+02:00) Harare</option>
+                                        <option value="Helsinki">(GMT+02:00) Helsinki</option>
+                                        <option value="Jerusalem">(GMT+02:00) Jerusalem</option>
+                                        <option value="Kaliningrad">(GMT+02:00) Kaliningrad</option>
+                                        <option value="Kyiv">(GMT+02:00) Kyiv</option>
+                                        <option value="Pretoria">(GMT+02:00) Pretoria</option>
+                                        <option value="Riga">(GMT+02:00) Riga</option>
+                                        <option value="Sofia">(GMT+02:00) Sofia</option>
+                                        <option value="Tallinn">(GMT+02:00) Tallinn</option>
+                                        <option value="Vilnius">(GMT+02:00) Vilnius</option>
+                                        <option value="Baghdad">(GMT+03:00) Baghdad</option>
+                                        <option value="Istanbul">(GMT+03:00) Istanbul</option>
+                                        <option value="Kuwait">(GMT+03:00) Kuwait</option>
+                                        <option value="Minsk">(GMT+03:00) Minsk</option>
+                                        <option value="Moscow">(GMT+03:00) Moscow</option>
+                                        <option value="Nairobi">(GMT+03:00) Nairobi</option>
+                                        <option value="Riyadh">(GMT+03:00) Riad</option>
+                                        <option value="St. Petersburg">(GMT+03:00) Saint Petersburg</option>
+                                        <option value="Tehran">(GMT+03:30) Tehran</option>
+                                        <option value="A
+
+            <div class=" form-group row mb-3 string optional">
+                                            <label class="col-sm-3 control-label string optional control-label"
+                                                style='padding-top:0px'>Idioma:</label>
+                                            <div class="col-sm-9">
+                                                Portuguese
+                                            </div>
+                                </div>
+
+                                <div class="form-group row mb-3 select optional user_other_langs form-group-valid">
+                                    <label class="col-sm-3 col-form-label select optional" for="user_other_langs">Outros
+                                        idiomas que eu falo (Máximo 2)</label>
+                                    <div class="col-sm-9"><input name="user[other_langs][]" type="hidden"
+                                            value="" /><select class="form-control is-valid select optional"
+                                            multiple="multiple" name="user[other_langs][]" id="user_other_langs">
+                                            <option value="af">Afrikaans</option>
+                                            <option value="sq">Albanian</option>
+                                            <option value="am">Amharic</option>
+                                            <option value="ar">Arabic</option>
+                                            <option value="hy">Armenian</option>
+                                            <option value="bm">Bambara</option>
+                                            <option value="eu">Basque</option>
+                                            <option value="bn">Bengali</option>
+                                            <option value="bg">Bulgarian</option>
+                                            <option value="my">Burmese</option>
+                                            <option value="ca">Catalan</option>
+                                            <option value="ceb">Cebuano</option>
+                                            <option value="km">Central Khmer</option>
+                                            <option value="hr">Croatian</option>
+                                            <option value="cs">Czech</option>
+                                            <option value="da">Danish</option>
+                                            <option value="dr">Dari</option>
+                                            <option value="nl">Dutch</option>
+                                            <option selected="selected" value="en">English</option>
+                                            <option value="et">Estonian</option>
+                                            <option value="fj">Fijian</option>
+                                            <option value="fil">Filipino</option>
+                                            <option value="fi">Finnish</option>
+                                            <option value="fr">French</option>
+                                            <option value="ff">Fulah</option>
+                                            <option value="ka">Georgian</option>
+                                            <option value="de">German</option>
+                                            <option value="gu">Gujarati</option>
+                                            <option value="ht">Haitian Creole</option>
+                                            <option value="ha">Hausa</option>
+                                            <option value="he">Hebrew</option>
+                                            <option value="hi">Hindi</option>
+                                            <option value="hu">Hungarian</option>
+                                            <option value="is">Icelandic</option>
+                                            <option value="ig">Igbo</option>
+                                            <option value="id">Indonesian</option>
+                                            <option value="ga">Irish</option>
+                                            <option value="it">Italian</option>
+                                            <option value="ja">Japanese</option>
+                                            <option value="kr">Kanuri</option>
+                                            <option value="ki">Kikuyu</option>
+                                            <option value="ko">Korean</option>
+                                            <option value="ku">Kurdish</option>
+                                            <option value="lv">Latvian</option>
+                                            <option value="li">Liberian English</option>
+                                            <option value="lt">Lithuanian</option>
+                                            <option value="mk">Macedonian</option>
+                                            <option value="ms">Malay</option>
+                                            <option value="ml">Malayalam</option>
+                                            <option value="mt">Maltese</option>
+                                            <option value="zh">Mandarin</option>
+                                            <option value="mi">Maori</option>
+                                            <option value="mr">Marathi</option>
+                                            <option value="el">Modern Greek (1453-)</option>
+                                            <option value="mn">Mongolian</option>
+                                            <option value="ne">Nepali</option>
+                                            <option value="no">Norwegian</option>
+                                            <option value="pa">Panjabi</option>
+                                            <option value="fa">Persian</option>
+                                            <option value="pl">Polish</option>
+                                            <option value="ps">Pushto</option>
+                                            <option value="qu">Quechua</option>
+                                            <option value="ro">Romanian</option>
+                                            <option value="ru">Russian</option>
+                                            <option value="sm">Samoan</option>
+                                            <option value="sr">Serbian</option>
+                                            <option value="si">Sinhala</option>
+                                            <option value="sk">Slovak</option>
+                                            <option value="sl">Slovenian</option>
+                                            <option value="so">Somali</option>
+                                            <option selected="selected" value="es">Spanish</option>
+                                            <option value="sw">Swahili</option>
+                                            <option value="sv">Swedish</option>
+                                            <option value="tl">Tagalog</option>
+                                            <option value="ta">Tamil</option>
+                                            <option value="tt">Tatar</option>
+                                            <option value="te">Telugu</option>
+                                            <option value="th">Thai</option>
+                                            <option value="bo">Tibetan</option>
+                                            <option value="to">Tonga (Tonga Islands)</option>
+                                            <option value="tr">Turkish</option>
+                                            <option value="uk">Ukrainian</option>
+                                            <option value="ur">Urdu</option>
+                                            <option value="uz">Uzbek</option>
+                                            <option value="vi">Vietnamese</option>
+                                            <option value="cy">Welsh</option>
+                                            <option value="xh">Xhosa</option>
+                                            <option value="yo">Yoruba</option>
+                                            <option value="dje">Zarma</option>
+                                        </select></div>
+                                </div>
+
+                                <div class="form-group row mb-3 string optional user_address form-group-valid"><label
+                                        class="col-sm-3 col-form-label string optional control-label"
+                                        for="user_address">Address</label>
+                                    <div class="col-sm-9"><input class="form-control is-valid string optional"
+                                            placeholder="Address" type="text" value="R"
+                                            name="user[address]" id="user_address" /></div>
+                                </div>
+                                <div class="form-group row mb-3 string optional user_address2"><label
+                                        class="col-sm-3 col-form-label string optional control-label"
+                                        for="user_address2">Address2</label>
+                                    <div class="col-sm-9"><input class="form-control string optional"
+                                            placeholder="Address2" type="text" name="user[address2]"
+                                            id="user_address2" /></div>
+                                </div>
+                                <div class="form-group row mb-3 string optional user_city form-group-valid"><label
+                                        class="col-sm-3 col-form-label string optional control-label"
+                                        for="user_city">City</label>
+                                    <div class="col-sm-9"><input class="form-control is-valid string optional"
+                                            placeholder="City" type="text" value="São Paulo " name="user[city]"
+                                            id="user_city" /></div>
+                                </div>
+                                <div class="form-group row mb-3 string optional user_state form-group-valid"><label
+                                        class="col-sm-3 col-form-label string optional control-label"
+                                        for="user_state">State</label>
+                                    <div class="col-sm-9"><input class="form-control is-valid string optional"
+                                            placeholder="State/Region" type="text" value="Sao Paulo" name="user[state]"
+                                            id="user_state" /></div>
+                                </div>
+
+                                <div class="form-group row mb-3 string optional user_postal_code form-group-valid">
+                                    <label class="col-sm-3 col-form-label string optional control-label"
+                                        for="user_postal_code">Zip code</label>
+                                    <div class="col-sm-9"><input class="form-control is-valid string optional"
+                                            placeholder="Zip code" type="text" value="" name="user[postal_code]"
+                                            id="user_postal_code" /></div>
+                                </div>
+
+
+                                <div class="mb-3 row">
+                                    <label for="staticCountry" class="col-sm-3 col-form-label">Country</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticCountry"
+                                            value="Brazil">
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group row mb-3 tel optional user_phone form-group-valid"><label
+                                        class="col-sm-3 col-form-label tel optional control-label"
+                                        for="user_phone">Phone</label>
+                                    <div class="col-sm-9"><input class="form-control is-valid string tel optional Phone"
+                                            type="text" placeholder="Phone Number (Including Country Code)"
+                                            value="+00 00 00000-0000" name="user[phone]" id="user_phone" /></div>
+                                </div>
+                                <fieldset class="form-group boolean optional user_email_notifications form-group-valid">
+                                    <div class="form-check"><input name="user[email_notifications]" type="hidden"
+                                            value="0" /><input class="form-check-input is-valid boolean optional"
+                                            type="checkbox" value="1" checked="checked" name="user[email_notifications]"
+                                            id="user_email_notifications" /><label
+                                            class="form-check-label boolean optional"
+                                            for="user_email_notifications">Email notifications</label></div>
+                                </fieldset>
+                                <div class="form-group row mb-3 select required user_gender form-group-valid"><label
+                                        class="col-sm-3 col-form-label select required control-label"
+                                        for="user_gender">gender <abbr title="necessary">*</abbr></label>
+                                    <div class="col-sm-9"><select class="form-control is-valid select required"
+                                            required="required" aria-required="true" name="user[gender]"
+                                            id="user_gender">
+                                            <option value="">Select</option>
+                                            <option selected="selected" value="0">Male</option>
+                                            <option value="1">Female</option>
+                                        </select></div>
+                                </div>
+                                <div class="form-group date required user_dob form-group-valid"><label
+                                        class="date required control-label" for="user_dob">Birth date <abbr
+                                            title="necessário">*</abbr></label>
+                                    <div class="d-flex flex-row justify-content-between align-items-center"><input
+                                            class="form-control mx-1 is-valid date required" required="required"
+                                            aria-required="true" value="1986-12-17" type="date" name="user[dob]"
+                                            id="user_dob" /></div>
+                                </div>
+
+
+                                <h4><strong>Change your password</strong></h4>
+
+                                <div class="alert alert-danger" role="alert" style="margin: 16px 0">
+                                    <h4 class="alert-heading" style="margin-top: 0;font-weight:bold">Make sure
+                                        don't miss entries</h4>
+                                        Warning: Changing your password invalidates any current credentials your phone
+                                        uses to sync which means you will need to logout and login
+                                        again. Don't change your password if your phone still has data with sync
+                                        pending.
+                                </div>
+
+
+                                <div class="form-group row mb-3 password optional user_password"><label
+                                        class="col-sm-3 col-form-label password optional control-label"
+                                        style="text-transform:capitalize" for="user_password">New Password</label>
+                                    <div class="col-sm-9"><input class="form-control password optional"
+                                            placeholder="New Password" type="password" name="user[password]"
+                                            id="user_password" /></div>
+                                </div>
+                                <div class="form-group row mb-3 password optional user_password_confirmation"><label
+                                        class="col-sm-3 col-form-label password optional control-label"
+                                        for="user_password_confirmation">Confirm new password</label>
+                                    <div class="col-sm-9"><input class="form-control password optional"
+                                            placeholder="Confirm new password" type="password"
+                                            name="user[password_confirmation]" id="user_password_confirmation" /></div>
+                                </div>
+                                <hr>
+                                <div class="form-group row mb-3 password required user_current_password"><label
+                                        class="col-sm-3 col-form-label password required control-label"
+                                        for="user_current_password">Current Password <abbr
+                                            title="necessary">*</abbr></label>
+                                    <div class="col-sm-9"><input class="form-control password required"
+                                            required="required" aria-required="true"
+                                            placeholder="We need your current password to confirm your changes."
+                                            type="password" name="user[current_password]" id="user_current_password" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="controls" style="text-align:center">
+                                        <input type="submit" name="commit" value="Save editions"
+                                            class="btn btn btn-lg green" data-disable-with="Wait.."
+                                            onclick="document.querySelector(#edit_user&39).classList.add()" />
+                                    </div>
+                                </div>
+                                <hr>
+                        </form>
+                    </div>
+
+
+
+
+
+                    <div role="tabpanel" id="referrals" class="tab-pane" style="padding-top:20px">
+                        <div class="row">
+                            <div class="col-md-12 Left">
+                                <h1>Referrals</h1>
+                            </div>
+                        </div>
+                        <div id="referralVue"></div> <!-- In-use by JS -->
+
+                    </div>
+
+                    <div role="tabpanel" id="verifications" class="tab-pane" style="padding-top:20px">
+                        <div class="row">
+                            <div class="col-md-12 Left">
+                                <h1>Verifications</h1>
+                            </div>
+                        </div>
+                        <table class='table table-bordered table-striped'>
+                            <thead>
+                                <tr>
+                                    <th>Idiom</th>
+                                    <th>Value</th>
+                                    <th>Actual Earnings</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div role="tabpanel" id="payment" class="tab-pane" style="padding-top:20px">
+                        <div class="row">
+                            <div class="col-md-12 Left">
+                                <h1>Payments</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-light d-flex align-items-center" role="alert">
+                                    <div>
+                                        <h3 class="alert-heading">
+                                            Summary
+                                        </h3>
+                                        <ul style="margin-left: 1em; line-height: 2">
+                                            <li>Your total winnings currently available for payment is $0.15
+                                            </li>
+                                            <li>Your historical payout total is $0.00</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Available earnings
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Your total winnings currently available for payment is $0.15</p>
+
+                                        <div class="alert alert-warning" role="alert">
+                                            Need $29.85 more.
+                                             You can request a payout when your earnings reach at least
+                                             $30.00.
+                                        </div>
+                                        <a class='btn btn btn-secondary disabled' style="margin: 16px 0">Request payment</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Payments Completed
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>You have no completed payments.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Payment profile
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <h4 style="font-weight:bold;padding:5px 10px;border: thin solid black;">For
+                                            offer better service, all bank deposits will be processed
+                                            through our ally Payment Rails. Fill in the form if you
+                                            selected this payment method.</h4>
+
+
+                                        <div class="alert alert-warning" role="alert">
+                                            Please make sure that all your details in “My Profile” are
+                                             complete and correspond to your legal identification.
+                                        </div>
+                                        <form class="simple_form edit_user" id="payout_form" action="/users"
+                                            accept-charset="UTF-8" method="post"><input type="hidden" name="_method"
+                                                value="put" /><input type="hidden" name="authenticity_token"
+                                                value="sSgi4a3ApK2i0vmXncHAlc1-qtFclES5S62XNdzm2KG81u7drvYoUIJUIhPsvVPB-LWEF1_ixuY12l41pjzQ3g" />
+
+                                                <div class="form-group select optional user_payout_method form-group-valid">
+                                                    <label class="select optional form-label" style="font-weight: bold"
+                                                        for="user_payout_method">Payment Method</label><select
+                                                        class="form-control is-valid select optional"
+                                                        name="user[payout_method]" id="user_payout_method">
+                                                        <option value="">Choose a method</option>
+                                                        <option value="2">Withdrawal of money</option>
+                                                        <option value="5">Bank transfer / PayPal</option>
+                                                        <option selected="selected" value="6">Bitcoin</option>
+                                                        <option value="9">Tether (USDT - ERC20)</option>
+                                                        <option value="10">USD Coin (USDC - ERC20)</option>
+                                                    </select></div>
+
+
+                                            <div
+                                                class="form-group string optional user_paypal_address form-group-valid">
+                                                <label class="string optional form-label" style="font-weight: bold"
+                                                    for="user_paypal_address">Payout Address</label><input
+                                                    class="form-control is-valid string optional" type="text"
+                                                    value="3Becsj6KR9VvHjABLBpz3sXVcGQNqnunHR"
+                                                    name="user[paypal_address]" id="user_paypal_address" /></div>
+
+                                            <div class="form-group select optional user_remitly_bank"><label
+                                                    class="select optional form-label" style="font-weight: bold"
+                                                    for="user_remitly_bank">Payment Location</label><select
+                                                    class="form-control select optional" name="user[remitly_bank]"
+                                                    id="user_remitly_bank">
+                                                    <option value="">Choose Location</option>
+                                                    <option value="true">Yes</option>
+                                                    <option value="false">No</option>
+                                                </select></div>
+
+                                            <div class="form-group string optional user_remitly_bank_acct"><label
+                                                    class="string optional form-label" style="font-weight: bold"
+                                                    for="user_remitly_bank_acct">Número Da Conta De Banco</label><input
+                                                    class="form-control string optional"
+                                                    placeholder="Enter your full account number (or phone number for Mobile Money)"
+                                                    type="text" value="" name="user[remitly_bank_acct]"
+                                                    id="user_remitly_bank_acct" /></div>
+                                            <div class="form-group password required user_current_password"><label
+                                                    class="password required form-label" style="font-weight: bold"
+                                                    for="user_current_password">Current Password<abbr
+                                                        title="necessário">*</abbr></label><input
+                                                    class="form-control password required" required="required"
+                                                    aria-required="true" placeholder="Current Password" type="password"
+                                                    name="user[current_password]" id="user_current_password" /><small
+                                                    class="form-text text-muted">We need your current password to
+                                                    confirm your changes.</small></div>
+                                            <div class="input-group mb-3" style="margin-top: 16px">
+                                                <input type="submit" name="commit" value="Save editions"
+                                                    class="btn btn green" data-disable-with="Wait.." />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" id="history" class="tab-pane" style="padding-top:20px">
+                        <div class="row">
+                            <div class="col-md-12 Left">
+                                <h1>My Gains</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="rejectionReasonModal" tabindex="-1" aria-labelledby="rejectionReasonModalTitle"
+                aria-hidden="true">
+                <div class="modal-dialog" style="width: 90%">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="rejectionReasonModalTitle">Loading...</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="rejectionReasonModalBody">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/user area/userArea.js"></script>
+        <script defer src="https://unpkg.com/frappe-charts@1.2.4"></script>
+
+        <!-- chunk.js -->
+        <script
+            src="https://d1qm9jziw6uw5m.cloudfront.net/packs/js/runtime~registrations_edit-aa8be5ffb00e54108d2a.js"></script>
+        <script
+            src="https://d1qm9jziw6uw5m.cloudfront.net/packs/js/vendors~client_dashboard~dashboards_show~operations_audits~operations_dialer~operations_menu~operati~c750c7bf-8d1346d80815bef78a98.chunk.js"></script>
+        <script
+            src="https://d1qm9jziw6uw5m.cloudfront.net/packs/js/vendors~client_dashboard~dashboards_show~operations_audits~operations_dialer~operations_menu~operati~1e39e29e-1d7f0907d6dc150a2308.chunk.js"></script>
+        <script
+            src="https://d1qm9jziw6uw5m.cloudfront.net/packs/js/registrations_edit-e40a2305df432c821443.chunk.js"></script>
+
+    </div> <!-- end of #row -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

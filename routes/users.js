@@ -8,9 +8,9 @@ const _ = require("lodash");
 const db = require("../models/index");
 const nodemailer = require("nodemailer");
 
-const router = express.Router(); //api/users
+const router = express.Router(); //api/usuários
 
-// Init email config
+// configuração inicial de e-mail
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -36,8 +36,8 @@ function validateUser(user) {
   return Joi.validate(user, schema);
 }
 
-// User Registration
-router.post("/", async (req, res) => {
+// Registro de usuário
+router.post("/register", async (req, res) => {
   try {
     await validateUser(req.body);
   } catch (err) {
@@ -51,13 +51,13 @@ router.post("/", async (req, res) => {
   });
   if (userFound) return res.status(400).send("User already registered");
 
-  // Create new user
+  // criar novo usuário
   let user = await db.User.build({
     username: req.body.username,
     email: req.body.email,
     password: req.body.password
   });
-  // Hash password
+  // Hash senha
   const salt = await bcrypt.genSalt(10);
   user.password = await bcrypt.hash(user.password, salt);
 
@@ -68,7 +68,7 @@ router.post("/", async (req, res) => {
   res.header("x-auth-token", token).send(_.pick(user, ["username", "email"]));
 });
 
-// post to generate reset password url
+// ir para página de reset de senha
 router.post("/reset_password/:email", async (req, res) => {
   let user;
   try {
@@ -81,10 +81,10 @@ router.post("/reset_password/:email", async (req, res) => {
   if (!user) {
     return res.status(404).send("Email never registered.");
   }
-  // Generate one-time use URL with jwt token
+  // Gerador de URL de uso único com jwt token
   const secret = `${user.password}-${user.createdAt}`;
   const token = jwt.sign({ id: user.id }, secret, {
-    expiresIn: 3600 // expires in 1 hour
+    expiresIn: 3600 // expira em 1 hora
   });
   const url = `localhost:${process.env.PORT ||
     3000}/users/reset_password_received/${user.id}/${token}`;
@@ -113,13 +113,13 @@ router.post("/reset_password/:email", async (req, res) => {
 
   sendEmail();
 });
-// post to verify reset password url
+// método post para verificar o rest da senha
 router.post("/receive_new_password/:id/:token", async (req, res) => {
-  // First parse request object
-  // Get id and token within params, and new password in body
+  // Primeiro objeto de solicitação de análise
+   // Obtém id e token dentro dos parâmetros e nova senha no corpo
   const { id, token } = req.params;
   const { password } = req.body;
-  // Validate new password
+  // Validar nova senha
   try {
     await Joi.validate(
       { password },
@@ -130,7 +130,7 @@ router.post("/receive_new_password/:id/:token", async (req, res) => {
   } catch (err) {
     return res.status(400).send(err.details[0].message);
   }
-  // get user from database with id
+  // obter usuário do banco de dados com id
   let user;
   try {
     user = await db.User.findOne({
@@ -140,9 +140,9 @@ router.post("/receive_new_password/:id/:token", async (req, res) => {
     return res.status(404).send("Error reading database");
   }
   if (!user) return res.status(404).send("No user with that id");
-  // Generate secret token
+  // Gerar token secreto
   const secret = `${user.password}-${user.createdAt}`;
-  // Verify that token is valid
+  // Verifica se o token é válido
   const payload = jwt.decode(token, secret);
   if (!payload) {
     return res.status(404).send("Invalid id or token");
@@ -150,7 +150,7 @@ router.post("/receive_new_password/:id/:token", async (req, res) => {
   if (payload.id != id) {
     return res.status(404).send("Invalid id or token");
   }
-  // Hash new password and store in database
+  // Hash nova senha e armazene no banco de dados
   const salt = await bcrypt.genSalt(10);
   user.password = await bcrypt.hash(password, salt);
   user = await user.save();
